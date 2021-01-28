@@ -1,0 +1,171 @@
+@charset "utf-8";
+/* CSS Document */
+/* Theme Name: GitHub Page
+Authors: Ilona Kozak 
+Copyright 2021. All rights reserved */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css');
+
+/* GENERAL STYLES */
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background: #fff;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  color: #111;
+  font-weight: normal;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.clear {
+	margin: 0px;
+	padding: 0px;
+	clear: both;
+}
+
+h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 45px;
+  line-height: 50px;
+  font-weight: 700;
+  color: #005371;
+  text-transform: uppercase;
+  -o-transition: .5s;
+  -ms-transition: .5s;
+  -moz-transition: .5s;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+h1 span {
+  color: #111;
+}
+
+h3 {
+  font-size: 22px;
+  text-transform: uppercase;
+}
+
+.divider {
+  background-image: url(../images/horizontal_linie.png);
+  height: 3px;
+  width: 300px;
+  margin-bottom: 10px;
+}
+
+/* CONTENT STYLES */
+#content{
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-auto-rows: minmax(100px, auto);
+}
+.top-image-left {
+  grid-column: 1/7;
+  background-image: url(../images/ireland.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.about-me-right {
+  grid-column: 7/13;
+  background-color: #eee;
+  background-image: url(../images/a_background.png);
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  padding: 100px;
+}
+
+.social-icon {
+  color: #fff;
+  font-size: 20px;
+}
+
+ul.social-icons {
+  margin: 50px 80px 0 0;
+  text-align: right;
+}
+
+.social-icons li {
+  vertical-align: top;
+  display: inline;
+  margin: 2px;
+}
+
+.social-icons a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.fa-linkedin,
+.fa-github,
+.fa-wordpress {
+  padding: 10px 14px;
+  -o-transition: .5s;
+  -ms-transition: .5s;
+  -moz-transition: .5s;
+  -webkit-transition: .5s;
+  transition: .5s;
+  background-color: #111;
+}
+
+.fa-linkedin:hover {
+  background-color: #0073a4;
+}
+
+.fa-github:hover {
+  background-color: #5a32a3;
+}
+
+.fa-wordpress:hover {
+  background-color: #73b819;
+}
+
+.profesion-left {
+  grid-column: 1/6;
+  background-image: url(../images/p_background.png);
+  background-repeat: no-repeat;
+  background-position: left center;
+  height: auto;
+}
+
+.colour-container {
+  height: 200px;
+  background-color: #005371;
+  grid-column: 6/7;
+  margin: -50px 20px 0 0;
+}
+
+.profesion-right {
+  grid-column: 7/13;
+  padding: 100px;
+}
+
+/* RESPONSIVE LAYOUT */
+@media screen and (max-width: 1024px) {
+  .about-me-right, .profesion-right {
+    padding: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .top-image-left,
+  .about-me-right, .profesion-right {
+    grid-column: 1/13;
+    min-height: 250px;
+  }
+  .profesion-right {
+    border-top: 20px solid #005371;
+  }
+
+  .profesion-left, .colour-container {
+    display: none;
+  }
+}
